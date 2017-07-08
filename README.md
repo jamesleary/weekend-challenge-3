@@ -25,15 +25,12 @@ left to complete are brought to the top of the list.
 
 Task list
 Base functionality
-[x] Set up base File with server and router 
-[ ] Create a new table called 'tasks' with 3 columns. ID, task, complete
-[ ] Set up Database with sample data to start with.
-[ ] Set up HTML with containers for the tasks to go and set up HTML input field
-    for adding to the task list.
-[ ] Create a GET request to link up database with sample data and append to the
-    DOM.
-[ ] Create a POST request to add new input data from HTML form to add new tasks
-    to the database and on refresh add them to the DOM.
+[x] Set up base File with server and router
+[x] Create a new table called 'tasks' with 3 columns. ID, task, complete
+[x] Set up Database with sample data to start with.
+[x] Set up HTML with containers for the tasks to go and set up HTML input field for adding to the task list.
+[ ] Create a GET request to link up database with sample data and append to the DOM.
+  [ ] Create a POST request to add new input data from HTML form to add new tasks to the database and on refresh add them to the DOM.
 [ ] Create a delete button to remove task from the list.
 [ ] Create a complete button to change the complete column boolean from false to true.
     this will also change either the color of the box or strikethrough text.
