@@ -1,0 +1,50 @@
+h1 {
+  text-align: center;
+}
+h2 {
+  text-align: center;
+}
+.inputField {
+  text-align: center;
+}
+
+input[type=text] {
+    -webkit-transition:  0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
+
+table {
+
+width: 80%;
+margin: 0 auto;
+}
+
+footer {
+  text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+
+}
+.completeBtn {
+  float: right;
+  height: 50px;
+  width: 50px;
+}
+.deleteBtn {
+  height: 50px;
+  width: 50px;
+}
+
+#completedTask {
+  background-color: green;
+}
+.edittask{
+  background-color: red;
+  height: 50px;
+}
