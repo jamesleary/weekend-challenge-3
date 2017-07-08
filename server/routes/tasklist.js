@@ -10,6 +10,7 @@ var config = {
   max: 10, //how many connections at one time
   idleTimeoutMillis: 30000 //30 second time out
 };
+var pool = new pg.Pool(config);
 
 router.get('/', function(req, res){
   console.log('GET tasks');
@@ -102,7 +103,34 @@ console.log('Delete', id);
     }
   });
 });
+router.put('/:id', function(req, res){
+  var id = req.params.id;
+  pool.connect(function(errorConnectingToDatabase, db, done){
+    if(errorConnectingToDatabase){
+      console.log('Error connecting to the database.');
+      res.sendStatus(500);
+    } else {
+      //we connected to the database!!!
+      //Now we're going to GET things from the db
+      var queryText = 'UPDATE "todotasks" SET "complete" = true WHERE id =$1;';
+      // errorMakingQuery is a boolean, result is an object
+      db.query(queryText,[id], function(errorMakingQuery, result){
+        done();
+        if(errorMakingQuery){
+          console.log('Attempted to query with', queryText);
+          console.log('Error making query');
 
-var pool = new pg.Pool(config);
+          res.sendStatus(500);
+        } else {
+          // console.log(result);
+          //send back the results
+          res.sendStatus(200);
+        }
+      });
+    }
+  });
+});
+
+
 
 module.exports = router;

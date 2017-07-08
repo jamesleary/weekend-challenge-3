@@ -31,6 +31,12 @@ function clickHandlers(){
     console.log($(this));
     deleteTasks(taskId);
   });
+  $('#viewTasks').on('click', '.completeBtn', function(){
+    console.log('Complete Task');
+    var compid = $(this).data('compid');
+    console.log($(this));
+    completeTasks(compid);
+  });
 }
 function addTasks(newTask){
   console.log( 'in addTask', newTask );
@@ -46,7 +52,16 @@ function addTasks(newTask){
 }); //end ajax
 }
 
-
+function completeTasks(compid){
+  $.ajax({
+        url: '/tasks/' + compid,
+        type: 'PUT',
+        success: function(response){
+          console.log(response);
+          getTasks();
+        } // end success
+      }); //end ajax
+}
 
 // get task list from server from database
 function getTasks(){
@@ -67,9 +82,9 @@ function appendToDom (tasks){
   for (var i = 0; i < tasks.length; i++) {
     var task = tasks[i];
     var $tr = $('<tr></tr>');
-    $tr.append('<td>'+ task.task +'</td>');
-    $tr.append('<td>'+ task.complete +'</td>');
-    $tr.append('<td>'+ '<button class ="completeBtn"' + task.id+ '">Complete</button"</td>');
+    $tr.append('<td class="edittask">'+ task.task +'</td>');
+
+    $tr.append('<td>'+ '<button class ="completeBtn"data-compid="' + task.id+ '">Complete</button"</td>');
     $tr.append('<td>'+ '<button class ="deleteBtn" data-taskid="' + task.id + '">Delete</button"</td>');
     $('#viewTasks').append($tr);
   }

@@ -34,5 +34,6 @@ Base functionality
 [x] Create a delete button to remove task from the list.
 [x] Create a POST request to add new input data from HTML form to add new tasks to the database and on refresh add them to the DOM.
 
-[ ] Create a complete button to change the complete column boolean from false to true.
+[x] Create a complete button to change the complete column boolean from false to true.
     this will also change either the color of the box or strikethrough text.
+[ ] Add Styling to make the project pretty
