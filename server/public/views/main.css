@@ -2,6 +2,10 @@ html {
   font-family: 'Handlee', cursive;
   background-image: url("https://images.freecreatives.com/wp-content/uploads/2015/10/crumpled_looseleaf_paper_texture.jpg");
 }
+.container{
+  width: 100%;
+   margin:0 auto;
+}
 h1 {
   text-align: center;
 }
@@ -12,13 +16,13 @@ h2 {
   text-align: center;
 }
 input {
-   border-color:#cccccc; text-align:center; font-size:25px; padding:5px; border-width:5px; border-radius:50px; border-style:ridge; text-shadow:3px 4px 0px rgba(42,42,42,.26); font-weight:normal; font-family:serif;  }
-input:focus { outline:none; } 
+   border-color:#cccccc; text-align:center; font-size:25px; padding:5px; border-width:5px; border-radius:50px; border-style:ridge; text-shadow:3px 4px 0px rgba(42,42,42,.26); font-weight:normal; font-family:serif;  
+input:focus { outline:none; }
 }
 
-table {
+#editTable {
 
-width: 80%;
+width: 70%;
 margin: 0 auto;
 }
 

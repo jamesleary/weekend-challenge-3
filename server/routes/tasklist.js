@@ -23,7 +23,7 @@ router.get('/', function(req, res){
     } else {
       //we connected to the database!!!
       //Now we're going to GET things from the db
-      var queryText = 'SELECT * FROM "todotasks"';
+      var queryText = 'SELECT * FROM "todotasks" ORDER BY "complete" ASC';
       // errorMakingQuery is a boolean, result is an object
       db.query(queryText, function(errorMakingQuery, result){
         done();
