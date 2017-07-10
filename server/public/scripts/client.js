@@ -4,6 +4,7 @@ $(document).ready(function(){
   getTasks();
   clickHandlers();
 });
+//Delete Task from the DOM when delete button is clicked
 function deleteTasks(taskId){
   $.ajax({
     url: '/tasks/' + taskId,
@@ -13,10 +14,8 @@ function deleteTasks(taskId){
       getTasks();
     } // end success
   }); //end ajax
-
-
-
 }
+//
 function clickHandlers(){
   $('#addButton').on('click', function(){
 

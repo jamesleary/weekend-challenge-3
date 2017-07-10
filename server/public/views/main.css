@@ -1,3 +1,7 @@
+html {
+  font-family: 'Handlee', cursive;
+  background-image: url("https://images.freecreatives.com/wp-content/uploads/2015/10/crumpled_looseleaf_paper_texture.jpg");
+}
 h1 {
   text-align: center;
 }
@@ -7,14 +11,9 @@ h2 {
 .inputField {
   text-align: center;
 }
-
-input[type=text] {
-    -webkit-transition:  0.4s ease-in-out;
-    transition: 0.4s ease-in-out;
-}
-
-input[type=text]:focus {
-    width: 100%;
+input {
+   border-color:#cccccc; text-align:center; font-size:25px; padding:5px; border-width:5px; border-radius:50px; border-style:ridge; text-shadow:3px 4px 0px rgba(42,42,42,.26); font-weight:normal; font-family:serif;  }
+input:focus { outline:none; } 
 }
 
 table {
@@ -33,18 +32,97 @@ footer {
 }
 .completeBtn {
   float: right;
-  height: 50px;
-  width: 50px;
 }
+    /*background-image: url("https://images.freecreatives.com/wp-content/uploads/2015/10/crumpled_looseleaf_paper_texture.jpg");*/
+
 .deleteBtn {
-  height: 50px;
-  width: 50px;
+  background: #fcfeff;
+  background-image: -webkit-linear-gradient(top, #fcfeff, #0083d4);
+  background-image: -moz-linear-gradient(top, #fcfeff, #0083d4);
+  background-image: -ms-linear-gradient(top, #fcfeff, #0083d4);
+  background-image: -o-linear-gradient(top, #fcfeff, #0083d4);
+  background-image: linear-gradient(to bottom, #fcfeff, #0083d4);
+  -webkit-border-radius: 19;
+  -moz-border-radius: 19;
+  border-radius: 19px;
+  text-shadow: 7px 7px 3px #666666;
+  color: #000000;
+  font-size: 30px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.deleteBtn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #f71616);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #f71616);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #f71616);
+  background-image: -o-linear-gradient(top, #3cb0fd, #f71616);
+  background-image: linear-gradient(to bottom, #3cb0fd, #f71616);
+  text-decoration: none;
 }
 
 #completedTask {
-  background-color: green;
+
+  text-decoration: line-through;
 }
 .edittask{
-  background-color: red;
+font-size: 24px;
   height: 50px;
+}
+
+  .completeBtn {
+    background: #fcfeff;
+    background-image: -webkit-linear-gradient(top, #fcfeff, #0083d4);
+    background-image: -moz-linear-gradient(top, #fcfeff, #0083d4);
+    background-image: -ms-linear-gradient(top, #fcfeff, #0083d4);
+    background-image: -o-linear-gradient(top, #fcfeff, #0083d4);
+    background-image: linear-gradient(to bottom, #fcfeff, #0083d4);
+    -webkit-border-radius: 19;
+    -moz-border-radius: 19;
+    border-radius: 19px;
+    text-shadow: 7px 7px 3px #666666;
+    color: #000000;
+    font-size: 30px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+
+  .completeBtn:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #2afc00);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #2afc00);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #2afc00);
+    background-image: -o-linear-gradient(top, #3cb0fd, #2afc00);
+    background-image: linear-gradient(to bottom, #3cb0fd, #2afc00);
+    text-decoration: none;
+  }
+.deleteBtn:hover {
+  background-color:red;
+}
+#addButton {
+  background: #fcfeff;
+  background-image: -webkit-linear-gradient(top, #fcfeff, #0083d4);
+  background-image: -moz-linear-gradient(top, #fcfeff, #0083d4);
+  background-image: -ms-linear-gradient(top, #fcfeff, #0083d4);
+  background-image: -o-linear-gradient(top, #fcfeff, #0083d4);
+  background-image: linear-gradient(to bottom, #fcfeff, #0083d4);
+  -webkit-border-radius: 19;
+  -moz-border-radius: 19;
+  border-radius: 19px;
+  text-shadow: 7px 7px 3px #666666;
+  color: #000000;
+  font-size: 30px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+#addButton:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #ffa647);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #ffa647);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #ffa647);
+  background-image: -o-linear-gradient(top, #3cb0fd, #ffa647);
+  background-image: linear-gradient(to bottom, #3cb0fd, #ffa647);
+  text-decoration: none;
 }
